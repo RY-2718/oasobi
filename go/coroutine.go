@@ -41,7 +41,7 @@ func (c *Context) Async(f func()) {
 // c.block channel に値を入力すると Async() が返却される
 // coroutine.f の処理は Async() でブロックされているため、 Async() を返却することで中断していた continue.f が再開される
 func (c *Context) TerminateAsync() {
-	c.block <- struct{}{}
+	close(c.block)
 }
 
 type Coroutine struct {
