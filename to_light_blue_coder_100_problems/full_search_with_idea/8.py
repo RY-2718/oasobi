@@ -17,7 +17,7 @@ def main():
     ans = 2 * n * 10 ** 9
     for i in range(0, len(ab)):
         start = ab[i]
-        for j in range(i+1, len(ab)):
+        for j in range(i + 1, len(ab)):
             end = ab[j]
             sum = 0
             for k in range(n):
